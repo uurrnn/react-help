@@ -1,11 +1,10 @@
 import React from 'react'
 
-const VideoDetail = (props) => {
-    if (!props) {
+const VideoDetail = ({video}) => {
+    if (!video) {
         return <div>Loading...</div>
     }
-    console.log(props)
-    const videoId = props.videos.id.videoId
+    const videoId = video.id.videoId
     const url = `https://www.youtube.com/embed/${videoId}` 
 
     return (
